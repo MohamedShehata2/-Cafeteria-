@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+    <head>
+        <!-- Mobile Specific Meta -->
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="img/fav.png" />
+        <!-- Author Meta -->
+        <meta name="author" content="iti-team" />
+        <!-- Meta Description -->
+        <meta name="description" content="" />
+        <!-- Meta Keyword -->
+        <meta name="keywords" content="" />
+        <!-- meta character set -->
+        <meta charset="UTF-8" />
+        <!-- Site Title -->
+        <title>Coffee</title>
+
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"
+            rel="stylesheet"
+        />
+        <!--
+			CSS
+			============================================= -->
+        <link rel="stylesheet" href="css/linearicons.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/magnific-popup.css" />
+        <link rel="stylesheet" href="css/nice-select.css" />
+        <link rel="stylesheet" href="css/animate.min.css" />
+        <link rel="stylesheet" href="css/owl.carousel.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="./user-home_last_order.css" />
+    </head>
+
+    <body>
+        <header id="header" id="home">
+            <div class="container">
+                <div class="align-items-center justify-content-around d-flex">
+                    <div id="logo">
+                        <a href="user-home_last_oneAdmin.html"
+                            ><img src="img/logo.png" alt="" title=""
+                        /></a>
+                    </div>
+                    <nav id="nav-menu-container">
+                        <ul class="nav-menu me-5">
+                            
+                            <li class="menu-active">
+                                <a href="user-home_last_oneAdmin.html">Home</a>
+                            </li>
+                            <li><a href="all_products.html">Products</a></li>
+                            <li><a href="all_users.html">Users</a></li>
+                            <li>
+                                <a href="orders.html">Orders</a>
+                            </li>
+                            <li><a href="checks.html">Checks</a></li>
+                            
+                            <li>
+                                <div class="imageAdmin">
+                                    <!-- <a class="navbar-brand" href="#"
+                                ><img id="img1" width="50px" height="50px" src="" alt="admin_pic">
+                                <a id="a1" href=""></a> -->
+                                    <a href="#" class="navbar-brand">
+                                        <img width="50px" height="50px" src="" id="imgOfUser" alt="">
+                                        <span class="ms-1" id="nameOfUser"></span>
+                                    </a>
+                                    <a href="#" class="navbar-brand">
+                                        <form
+                                            class="m-0 p-0"
+                                            action="http://localhost/logout.php"
+                                        >
+                                            <span class="ms-1"
+                                                ><input
+                                                    class="btn p-1  btn-outline-light"
+                                                    type="submit"
+                                                    value="logout"
+                                            /></span>
+                                        </form>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- <div style="float: right;" >
+                    <a href="#" class="navbar-brand">
+                        <form class="position-absolute " action="http://localhost/logout.php">
+                        <span class="ms-1"><input class="btn"  type="submit" value="logout">
+                            
+                            </form>
+                            </span>
+                    </a>
+                </div> -->
+                </div>
+        </header><!-- #header -->
+        <section class="banner-area" id="home">
+            <div class="container">
+                <div
+                    class="row fullscreen d-flex align-items-center justify-content-start"
+                >
+                    <div class="banner-content col-lg-7">
+                        <h6 class="text-white text-uppercase">
+                            Now you can feel the Energy
+                        </h6>
+                        <h1>
+                            Start your day with <br />
+                            a black Coffee
+                        </h1>
+                        <a href="#" class="primary-btn text-uppercase"
+                            >Buy Now</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <!-- Shopping Cart -->
+                <aside class="col-4 shopping-cart">
+                    <form
+                        class="cart-form d-flex flex-column"
+                        method="post"
+                        id="formEdit"
+                        action=""
+                    >
+                        <div class="cart-items"></div>
+                        <label class="form-label" for="notes">Notes</label>
+                        <textarea
+                            class="form-control mb-2"
+                            name="notes"
+                            id="notes"
+                            cols="30"
+                            rows="10"
+                        ></textarea>
+
+                        <label class="form-label" for="room">Room</label>
+                        <select
+                            class="form-control"
+                            name="room"
+                            id="room"
+                        ></select>
+                        <div
+                            class="d-flex justify-content-between align-items-center my-3"
+                        >
+                            <p class="total-price">Total price:</p>
+                            <strong class="font-weight-bold"
+                                ><input
+                                    type="text"
+                                    name="total"
+                                    id="totalInLE"
+                                    style="width: 50px"
+                                    value="0"
+                                />
+                                LE</strong
+                            >
+                        </div>
+                        <button type="submit" class="btn" id="confirm">
+                            Confirm
+                        </button>
+                    </form>
+                </aside>
+                <main class="col-8">
+                    <!-- Last orderd Products -->
+                    <div class="last-orders mb-5">
+                        <h3 class="h3 mb-4">Last orders</h3>
+                        <div
+                            class="container ps-0 d-flex flex-wrap gap-4 orders"
+                        >
+                            <!-- <div class="product">
+              <img class="img-fluid" src="https://via.placeholder.com/128" alt="" />
+              <p class="lead"></p>
+            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- All Products -->
+                    <div class="container all-products">
+                        <h3 class="mh3 mb-4">All Users</h3>
+                        <select
+                            class="form-select mb-5"
+                            id="users"
+                            name="users"
+                        ></select>
+                        <h3 class="mh3 mb-4">All Drinks</h3>
+                        <form action="" method="post">
+                            <div class="input-group mb-3">
+                                <input
+                                    type="search"
+                                    name="search"
+                                    class="form-control"
+                                    placeholder="Search for drinks"
+                                    aria-label="search"
+                                    aria-describedby="input-group-right"
+                                />
+                                <button
+                                    type="submit"
+                                    name="submit"
+                                    class="input-group-text"
+                                    id="input-group-right-example"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        class="search-icon"
+                                        width="24"
+                                        height="24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="container ps-0 d-flex flex-wrap"></div>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="container my-4">
+                        <nav>
+                            <ul class="pagination" id="ul1"></ul>
+                        </nav>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <footer class="footer-area section-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6>About Us</h6>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore dolore magna aliqua.
+                            </p>
+                            <p class="footer-text">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                All rights reserved | This template is made with
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                by
+                                <a href="https://colorlib.com" target="_blank"
+                                    >Colorlib</a
+                                >
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6>Newsletter</h6>
+                            <p>Stay update with our latest</p>
+                            <div class="" id="mc_embed_signup">
+                                <form
+                                    target="_blank"
+                                    novalidate="true"
+                                    action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                    method="get"
+                                    class="form-inline"
+                                >
+                                    <input
+                                        class="form-control"
+                                        name="EMAIL"
+                                        placeholder="Enter Email"
+                                        onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Enter Email '"
+                                        required=""
+                                        type="email"
+                                    />
+                                    <button class="click-btn btn btn-default">
+                                        <i
+                                            class="fa fa-long-arrow-right"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </button>
+                                    <div
+                                        style="
+                                            position: absolute;
+                                            left: -5000px;
+                                        "
+                                    >
+                                        <input
+                                            name="b_36c4fd991d266f23781ded980_aefe40901a"
+                                            tabindex="-1"
+                                            value=""
+                                            type="text"
+                                        />
+                                    </div>
+
+                                    <div class="info pt-20"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+                        <div class="single-footer-widget">
+                            <h6>Follow Us</h6>
+                            <p>Let us be social</p>
+                            <div
+                                class="footer-social d-flex align-items-center"
+                            >
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                                <a href="#"><i class="fa fa-behance"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- <script defer src="./user-home.js"></script> -->
+        <script src="session_validate.js"></script>
+        <script src="js/vendor/jquery-2.2.4.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script
+            type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"
+        ></script>
+        <script src="js/easing.min.js"></script>
+        <script src="js/hoverIntent.js"></script>
+        <script src="js/superfish.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/mail-script.js"></script>
+        <!-- <script src="./user-home_last_order.js"></script> -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+            integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="js/main.js"></script>
+        <script src="./user-home_last_orderAdmin.js"></script>
+    </body>
+</html>
